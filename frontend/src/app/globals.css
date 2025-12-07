@@ -2,7 +2,7 @@
 
 /* Root variables */
 :root {
-  --background: #ffffff; /* pure white */
+  --background: #73c3db; /* pure white */
   --foreground: #0f172a; /* slate-900 */
 
   /* Brand colors */
@@ -47,7 +47,7 @@
 body {
   background: #ffffff !important; /* pure white */
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Georgia, 'Times New Roman', Times, serif;
   margin: 0;
   padding: 0;
 }
@@ -55,4 +55,17 @@ body {
 /* Optional: smooth rendering */
 html {
   scroll-behavior: smooth;
+}
+
+@font-face{
+  font-family: "Plantin";
+  src: url("/fonts/PlantinMTProRg.ttf") format("ttf");
+  font-weight: 400; 
+  font-style: normal; 
+  font-display: swap; 
+
+}
+
+.font-plantin{
+  font-family: "Plantin", serif;
 }

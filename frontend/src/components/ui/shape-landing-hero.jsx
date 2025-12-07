@@ -4,6 +4,7 @@ import { Circle } from "lucide-react";
 import { NavBar } from "@/components/ui/tubelight-navbar"
 import { Home, User, Briefcase, FileText } from 'lucide-react'
 import { cn } from "@/lib/utils";
+import { Color } from "three";
 
 
 function ElegantShape({
@@ -12,7 +13,7 @@ function ElegantShape({
     width = 400,
     height = 100,
     rotate = 0,
-    gradient = "from-white/[0.08]"
+    gradient = "from-white/[0.08]",
 }) {
     return (
         <motion.div
@@ -63,9 +64,9 @@ function ElegantShape({
 }
 
 function HeroGeometric({
-    badge = "Design Collective",
     title1 = "Elevate Your Digital Vision",
-    title2 = "Crafting Exceptional Websites"
+    title2 = "Crafting Exceptional Websites",
+    src
 }) {
     const fadeUpVariants = {
         hidden: { opacity: 0, y: 30 },
@@ -89,7 +90,7 @@ function HeroGeometric({
 
     return (
         <div
-            className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white">
+             className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white">
                 <NavBar items={navItems}/>
             <div
                 className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.03] via-transparent to-rose-500/[0.03] blur-3xl" />
@@ -136,29 +137,25 @@ function HeroGeometric({
             </div>
             <div className="relative z-10 container mx-auto px-4 md:px-6">
                 <div className="max-w-3xl mx-auto text-center">
-                    <motion.div
-                        custom={0}
-                        variants={fadeUpVariants}
-                        initial="hidden"
-                        animate="visible"
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.03] border border-black/[0.08] mb-8 md:mb-12">
-                        <Circle className="h-2 w-2 fill-rose-500/80" />
-                        <span className="text-sm text-black/60 tracking-wide">
-                            {badge}
-                        </span>
-                    </motion.div>
 
                     <motion.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
+                        {src && (
+                            <img 
+                            src ={src}
+                            alr = "Fincrate Logo"
+                            className = "mx-auto mb-4 h-40 zw-auto"
+                            />
+                        )}
                         <h1
                             className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 tracking-tight">
                             <span
-                                className="bg-clip-text text-transparent bg-gradient-to-b from-black to-black/80">
+                                className="bg-clip-text text-transparent bg-gradient-to-b from-black to-black/80 font-plantin">
                                 {title1}
                             </span>
                             <br />
                             <span
                                 className={cn(
-                                    "bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-black/90 to-rose-600 "
+                                    "bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-black/90 to-rose-600 font-plantin "
                                 )}>
                                 {title2}
                             </span>

@@ -141,7 +141,7 @@ export function BeamsBackground({
                 className="absolute inset-0"
                 style={{ filter: "blur(15px)" }} />
             <motion.div
-                className="absolute inset-0 bg-white/5"
+                className="absolute inset-0 bg-blue/5"
                 animate={{
                     opacity: [0.05, 0.15, 0.05],
                 }}
