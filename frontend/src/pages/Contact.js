@@ -11,7 +11,7 @@ const Contact = () => {
         { name: 'Home', url: '/', icon: Home },
         { name: 'About', url: '#', icon: User },
         { name: 'Contact', url: '/contact', icon: Briefcase },
-        { name: 'Login', url: '/signup', icon: FileText }
+        { name: 'Signup', url: '/signup', icon: FileText }
     ];
 
     // Team member data

@@ -3,7 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import sql from './db.js';
 
-import authRoutes from './routes/auth.js';
+import authRoutes from './routes/Auth.js';
 import portfolioRoutes from './routes/portfolio.js';
 import investmentRoutes from './routes/investments.js';
 import assetRoutes from './routes/assets.js';
@@ -35,11 +35,6 @@ app.use('/api/investments', investmentRoutes);
 app.use('/api/assets', assetRoutes);
 app.use('/api/market', marketRoutes);
 app.use('/api/chatbot', chatbotRoutes);
-
-// Health check
-app.get('/api/health', (req, res) => {
-  res.json({ status: 'OK', message: 'Fincrate API is running' });
-});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
